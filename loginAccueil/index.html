@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Accueil</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="containerGlobal">
+		<div class="leftPanel">
+			<h1><strong>Techno</strong> Stock</h1>
+
+			<form action="" class="formBlock">
+
+				<h3>Identifiez-vous</h3>
+
+				<div class="formGroup">
+					<label for="user">Utilisateur</label>
+					<input type="text" required maxlength="16" id="user">
+				</div>
+
+				<div class="formGroup">
+					<label for="password">Mot de passe</label>
+					<input type="text" required maxlength="16" id="password">
+				</div>
+
+				<div class="formGroup">
+					<input type="submit" value="LOGIN" class="buttonSub">
+				</div>
+
+				<div class="lostPass">
+					<a href="#">Mot de passe perdu ?</a>
+				</div>
+			</form>	
+
+			<div class="back">
+				<a href="../index.html">Retour</a>
+			</div>
+		</div>
+
+		<div class="rightPanel">
+			<div class="illustration">
+				<img src="illustration.svg" alt="illustration" class="image">
+			</div>
+			<h2>Partez à la conquête du ciel !</h2>
+		</div>
+	</div>
+
+	<script>
+		const inputFields = document.querySelectorAll('input');
+
+		for(let i = 0; i < inputFields.length; i++) {
+			let field = inputFields[i];
+
+			field.addEventListener('input', function(e) {
+				if(e.target.value != "") {
+					e.target.parentNode.classList.add('animation');
+				} else if (e.target.value === "") {
+					e.target.parentNode.classList.remove('animation');
+				}
+			})
+		}
+	</script>
+</body>
+</html>

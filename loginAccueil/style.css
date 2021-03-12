@@ -1,0 +1,193 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: monospace, sans-serif;
+}
+
+.containerGlobal {
+	display: flex;
+	min-height: 100vh;
+}
+
+.leftPanel {
+	flex: 1 1 33.333%;
+	padding: 25px;
+}
+
+.leftPanel h1 {
+	color: #8b97d7;
+	font-size: 48px;
+	font-weight: 400;
+	margin-bottom: 50px;
+}
+
+.leftPanel h1 strong {
+	color: #5260ad;
+	font-weight: 900;
+}
+
+.formBlock h3 {
+	color: #666;
+	font-size: 28px;
+	font-weight: 500;
+	margin-bottom: 45px;
+}
+
+.formBlock .formGroup {
+	position: relative;
+	display: flex;
+	margin-bottom: 45px;
+}
+
+.formBlock .formGroup label {
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	transform: translateY(-50%);
+	color: #aaa;
+	font-size: 20px;
+	transition: 0.4s ease-out;
+}
+
+.formBlock .formGroup input {
+	display: block;
+	width: 100%;
+	padding: 10px 0px;
+	border: none;
+	outline: none;
+	background: none;
+	border-bottom: 3px solid #aaa;
+	color: #666;
+	font-size: 20px;
+	transition: 0.4s ease-out;
+}
+
+.formGroup:nth-child(4) {
+	margin-bottom: 25px;
+	justify-content: flex-end;
+}
+
+.formBlock .formGroup .buttonSub {
+	display: block;
+	width: auto;
+	padding: 15px 60px;
+	border: 3px solid #8b97d7;
+	border-radius: 999px;
+	background-image: linear-gradient(to right, transparent 50%, #5260ad 50%, #8b97d7);
+	background-size: 200%;
+	color: #8b97d7;
+	font-size: 24px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.formBlock .formGroup .buttonSub:hover {
+	color: #fff;
+	background-position: 100%;
+	border: 3px solid #fff;
+}
+
+.formBlock .lostPass a {
+	color: #8b97d7;
+	font-size: 16px;
+	font-weight: 400;
+	text-decoration: none;
+	padding-bottom: 5px;
+	border-bottom: 2px solid transparent;
+}
+
+.formBlock .lostPass a:hover {
+	border-bottom-color: #8b97d7;
+}
+
+.rightPanel {
+	flex: 1 1 66.666%;
+	background-image: linear-gradient(to bottom right, rgb(149,166,243), rgb(112,113,146));
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.rightPanel .illustration {
+	margin-bottom: 50px;
+}
+
+.rightPanel h2 {
+	color: #fff;
+	font-size: 48px;
+	font-weight: 400;
+	text-align: center;
+}
+
+.formBlock .formGroup:focus-within label,
+.formBlock .formGroup.animation label {
+	top: 0px;
+	transform: translateY(-100%);
+	color: #8b97d7;
+}
+
+.formBlock .formGroup:focus-within input,
+.formBlock .formGroup.animation input {
+	border-bottom-color: #8b97d7;
+}
+
+@media screen and (max-width: 1200px) {
+	.containerGlobal {
+		flex-direction: column;
+		min-height: 100vh;
+		width: 100vw;
+		align-items: center;
+	}
+
+	.rightPanel {
+		display: none;
+	}
+
+	.leftPanel {
+		width: 70vw;
+		padding: 25px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.leftPanel {
+		width: 80vw;
+	}
+
+	.formBlock .formGroup .buttonSub {
+		margin: 0 auto;
+	}
+	
+	.lostPass {
+		text-align: center;
+	}
+}
+
+.back {
+	width: 100%;
+	margin: 50px auto;
+	text-align: center;
+}
+
+.back a {
+	text-decoration: none;
+	text-transform: uppercase;
+	background: crimson;
+	padding: 15px;
+	border-radius: 5px;
+	color: #fff;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 400px) {
+	.leftPanel {
+		width: 100vw;
+	}
+}
